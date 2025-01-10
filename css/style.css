@@ -299,8 +299,8 @@ section h2::after {
     width: 100%;
     max-width: 1600px;
     overflow-x: auto; /* Allow horizontal scrolling if needed */
-    margin: 0 auto;
-    justify-content: center;
+    margin-inline: 0 auto;
+    /* justify-content: center; */
 }
 
 .project-box {
