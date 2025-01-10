@@ -296,7 +296,7 @@ section h2::after {
     display: flex;
     gap: 1.5rem;
     padding: 1rem;
-    width: 100%;
+    /* width: 100%; */
     max-width: 1600px;
     overflow-x: auto; /* Allow horizontal scrolling if needed */
     margin-inline: 0 auto;
