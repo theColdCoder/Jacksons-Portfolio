@@ -115,6 +115,7 @@ section h2::after {
     justify-content: space-evenly;
     padding: 8rem 2rem;
     display: flex;
+    flex-wrap: wrap-reverse;
     align-items: center;
     text-align: center;
     gap: 0.5rem;
@@ -160,7 +161,7 @@ section h2::after {
     padding: 0 2rem;
     /* max-width: 56.25rem; */
     width: 50%;
-    /* border: 2px green solid; */
+    border: 2px green solid;
 }
 
 #about-section .bio p {
@@ -497,7 +498,7 @@ footer {
 
 @media (max-width: 576px) {
     nav {
-        padding: 0 1rem;
+        padding: 0 0.3rem;
     }
 
     nav .left a {
@@ -505,16 +506,27 @@ footer {
     }
 
     nav .right a {
-        font-size: 0.8rem;
-        margin: 0 0.25rem;
+        font-size: 0.7rem;
+        margin: 0 0rem;
+        /* border: 2px green solid; */
+
     }
+
+    #about-section .bio {
+        margin-bottom: 2rem;
+        padding: 0 0.5rem;
+        /* max-width: 56.25rem; */
+        width: 100%;
+        /* border: 2px green solid; */
+    }
+    
 
     #about-section .social-links {
         font-size: 1.75rem;
     }
 
     #about-section h2 {
-        font-size: 2.4rem;
+        font-size: 2rem;
     }
 
     #about-section .headshot {
