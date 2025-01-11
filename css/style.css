@@ -303,7 +303,7 @@ section h2::after {
     margin: 0 auto;
     overscroll-behavior-inline: contain;
     justify-content: center;
-    border: #dfdfdf 2px solid;
+    /* border: #dfdfdf 2px solid; */
 }
 
 .project-box {
