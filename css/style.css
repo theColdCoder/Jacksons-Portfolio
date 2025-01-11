@@ -294,13 +294,16 @@ section h2::after {
 
 .swiper-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.5rem;
     padding: 1rem;
     /* width: 100%; */
-    max-width: 1600px;
-    overflow-x: auto; /* Allow horizontal scrolling if needed */
-    margin-inline: 0 auto;
-    /* justify-content: center; */
+    max-width: 1020px;
+    overflow-x: auto; /*Allow horizontal scrolling if needed*/
+    margin: 0 auto;
+    overscroll-behavior-inline: contain;
+    justify-content: center;
+    border: #dfdfdf 2px solid;
 }
 
 .project-box {
