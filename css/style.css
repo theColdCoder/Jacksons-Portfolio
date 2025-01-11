@@ -431,11 +431,22 @@ footer {
    
 }
 
+.fa-solid {
+   
+    
+    color:#98C1D9;
+}
+.arrow {
+    display: flex;
+    gap: 2rem;
+    padding: 1.25rem;
+}
+
 .swiper-slide > a {
     display: block;
     transform: scale(0.9);
     width: 280px;
-    height: 500px;
+    min-height: 600px;
 }
 
 
