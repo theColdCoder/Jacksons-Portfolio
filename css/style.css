@@ -1,8 +1,8 @@
 /* Base Styles */
 :root {
-    --text-color: #98C1D9;
-    --link-color: #ffffff;
-    --background-color: #000000;
+    --text-color: #2B1460;
+    --link-color: #ABFF1F;
+    --background-color: #F7F6FA;
     font-size: 16px; /* Set the base font size */
 }
 
@@ -23,10 +23,10 @@ html {
 } */
 
 body {
-    font-family: "Roboto Mono", serif;
+    font-family: "Poppins", sans-serif;
 }
 
-a {
+a, h1, h2, h3 {
     color: var(--text-color);
     text-decoration: none;
 }
@@ -43,19 +43,24 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(43, 20, 96, 0.9);
     backdrop-filter: blur(5px);
 }
 
 nav .left a {
-    color: var(--text-color);
+    color: var(--background-color);
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
 }
 
+nav .left a:hover {
+    color: var(--link-color);
+    transition: color 0.3s ease-in-out;
+}
+
 nav .right a {
-    color: var(--text-color);
+    color: var(--background-color);
     font-size: 1.375rem;
     margin: 0 0.625rem;
 }
@@ -68,7 +73,7 @@ nav .right a:hover {
 /* General Section Styles */
 section {
     padding: 8rem 2rem;
-    /* min-height: 80vh; Reduce the default minimum height */
+   /* min-height: 60vh; Reduce the default minimum height */
     display: flex;
     /* flex-direction: column; */
     align-items: center;
@@ -79,16 +84,16 @@ section {
 }
 
 section:nth-of-type(odd) {
-    background-color: #000000; /* Light gray for odd sections */
+    background-color: #F7F6FA; /* Light gray for odd sections */
 }
 
 section:nth-of-type(even) {
-    background-color: #000000f8; /* White for even sections */
+    background-color: #2B1460; /* White for even sections */
 }
 
 /* Section Heading Styles */
 section h2 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 700;
     color: var(--text-color);
     margin-bottom: 1rem;
@@ -101,7 +106,7 @@ section h2::after {
     position: absolute;
     width: 100px;
     height: 4px;
-    background-color: #bfd6c4;
+    background-color: #2B1460;
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
@@ -119,10 +124,23 @@ section h2::after {
     display: flex;
     flex-wrap: wrap-reverse;
     align-items: center;
-    text-align: center;
+    text-align: left;
     gap: 0.5rem;
     /* border: 2px whitesmoke solid; */
 }
+
+#about-section h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #2B1460;
+    bottom: -10px;
+    left: 20%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
 
 
 
@@ -162,7 +180,7 @@ section h2::after {
     margin-bottom: 2rem;
     padding: 0 2rem;
     /* max-width: 56.25rem; */
-    width: 50%;
+    width: 40%;
     /* border: 2px green solid; */
 }
 
@@ -170,7 +188,7 @@ section h2::after {
     font-size: 1rem;
     font-weight: 300;
     line-height: 2;
-    color:#98C1D9;
+    color: var(--text-color);
 }
 
 #about-section .social-links {
@@ -187,12 +205,12 @@ section h2::after {
 }
 
 #about-section .social-links a:hover i {
-    color: #a5d6b0;
+    color: #ABFF1F;
     transform: scale(1.2);
 }
 
 #about-section .social-links i {
-    color: #98C1D9;
+    color: #2B1460;
     font-weight: 500;
     padding-top: 3.75rem;
 }
@@ -203,7 +221,8 @@ section h2::after {
     width: 100%;
     min-height: 80PX;
     padding: 1rem 1.25rem;
-    background-color: #98C1D9;
+    background-color: #2B1460;
+    color:#F7F6FA
 }
 
 .info {
@@ -271,11 +290,12 @@ section h2::after {
     justify-content: center;
     text-align: center;
     gap: 2rem;
+    padding-bottom: 2rem;
 }
 
 #projects-section h2 {
     margin-bottom: 1rem;
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-weight: 700;
 }
 
@@ -283,7 +303,7 @@ section h2::after {
     margin-bottom: 2rem;
     font-size: 1.5rem;
     font-weight: 400;
-    color:#98C1D9;
+    color:#2B1460;
     /* text-decoration: underline; */
 }
 
@@ -309,14 +329,17 @@ section h2::after {
 
 .project-box {
    
-    flex: 0 0 20rem; /* Fixed width for the boxes */
+    flex: 0 0 30rem; /* Fixed width for the boxes */
+    width: 30rem;     /* Added explicit width */
+     min-height: 28rem; /* Added min-height for more height */
     text-align: center;
     /* border: 1px solid #030303; */
     border-radius: 0.5rem;
-    padding: 1rem;
-    background-color: #dfdfdf;
-    box-shadow: 0 4px 8px rgba(212, 212, 212, 0.151);
+    padding: 0rem;
+    background-color: #F7F6FA;
+    box-shadow: 0 4px 8px rgba(43, 20, 96, 0.9);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling */
+    color: #2B1460;
    
 }
 
@@ -327,31 +350,63 @@ section h2::after {
 
 .project-box img {
     width: 100%;
-    height: 16rem;
+    height: 20rem;
     object-fit: cover;
     border-radius: 0.25rem;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
 }
 
 .project-box h4 {
     margin-bottom: 0.5rem;
     font-size: 1rem;
     font-weight: 700;
-    color: rgb(26, 26, 26);
+    color: #2B1460;
 }
 
 .project-box h5 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.875rem;
     font-weight: 500;
 }
 
 .project-box p {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     font-weight: 300;
-    color: #242424;
-    text-align: left;
+    color: #2B1460;
+    text-align: center;
+    padding: 20px
    
     
+}
+
+/* Cards Swiper */
+.swiper {
+    width: 100%;
+  }
+
+.swiper-slide {
+    width: 300px;
+    /* width: 272px !important; */
+    min-height: 500px;
+    
+   
+}
+
+.fa-solid {
+   
+    
+    color:#2B1460;
+}
+.arrow {
+    display: flex;
+    gap: 2rem;
+    padding: 1.25rem;
+}
+
+.swiper-slide > a {
+    display: block;
+    transform: scale(0.9);
+    width: 320px;
+    min-height: 720px;
 }
 
 /* Skills Section */
@@ -368,6 +423,19 @@ section h2::after {
     margin-bottom: 1rem;
     font-size: 2.75rem;
     font-weight: 700;
+    color:#F7F6FA
+}
+
+#skills-section h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #F7F6FA;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
 }
 
 #skills-section .skills-container {
@@ -379,14 +447,14 @@ section h2::after {
 
 #skills-section i {
     font-size: 3rem;
-    color: #98C1D9;
+    color: #F7F6FA;
     transition: transform 0.3s ease, color 0.3s ease;
     margin: 1rem 0; /* Add margin to ensure proper spacing */
 }
 
 #skills-section i:hover {
     transform: scale(1.2);
-    color: #a5d6b0;
+    color: #ABFF1F;
 }
 
 /* Leave a Message Section */
@@ -414,42 +482,14 @@ section h2::after {
 }
 
 footer {
-    background-color:#98C1D9;
-    color: #000000;
+    background-color:#2B1460;
+    color: #F7F6FA;
     text-align: center;
     padding: 1rem 0;
     font-size: 0.875rem;
 }
 
-/* Cards Swiper */
-.swiper {
-    width: 100%;
-  }
 
-.swiper-slide {
-    width: 280px;
-    /* width: 272px !important; */
-    min-height: 500px;
-   
-}
-
-.fa-solid {
-   
-    
-    color:#98C1D9;
-}
-.arrow {
-    display: flex;
-    gap: 2rem;
-    padding: 1.25rem;
-}
-
-.swiper-slide > a {
-    display: block;
-    transform: scale(0.9);
-    width: 280px;
-    min-height: 600px;
-}
 
 
 /* Media Queries for Responsiveness */
@@ -498,6 +538,27 @@ footer {
         height: 16rem;
     }
 
+    #about-section .bio {
+        margin-bottom: 2rem;
+        text-align: center;
+        padding: 0 0.5rem;
+        /* max-width: 56.25rem; */
+        width: 100%;
+        /* border: 2px green solid; */
+    }
+
+    #about-section h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #2B1460;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
     #projects-section .project-box {
         flex: 0 0 14rem;
     }
@@ -529,6 +590,7 @@ footer {
 
     #about-section .bio {
         margin-bottom: 2rem;
+        text-align: center;
         padding: 0 0.5rem;
         /* max-width: 56.25rem; */
         width: 100%;
@@ -565,11 +627,15 @@ footer {
         padding: 6rem 1rem; /* Adjust padding for smaller screens */
     }
 
+    #about-section {
+        padding-bottom: 2rem;
+    }
+
     #projects-section {
-        padding: 6rem 1rem; /* Adjust padding for smaller screens */
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
     }
 
     #leave-message-section {
-        padding: 3rem 1rem; /* Adjust padding for smaller screens */
+        padding: 2rem 1rem; /* Adjust padding for smaller screens */
     }
 }
