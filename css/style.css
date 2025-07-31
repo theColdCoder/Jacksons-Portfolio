@@ -481,6 +481,10 @@ section h2::after {
     line-height: 1.6;
 }
 
+.message-box {
+    width:30%;
+}
+
 footer {
     background-color:#2B1460;
     color: #F7F6FA;
